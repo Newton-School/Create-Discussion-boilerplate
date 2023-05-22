@@ -1,12 +1,12 @@
-const Discussion   = require("../models/Discussion.js");
+const Discussion   = require("../models/discussion.js");
 
 
-const getalldiscussion =async (req, res) => {
+const getAllDiscussion =async (req, res) => {
 
-    const all_discussion = await Discussion.find({});
+    const allDiscussion = await Discussion.find({});
     res.status(200).json({
-        "status": "success",
-        "data": all_discussion
+        status: 'success',
+        data: allDiscussion
     })
    
 }
@@ -14,9 +14,9 @@ const getalldiscussion =async (req, res) => {
 /*
 
 request.body = {
-    "heading": heading,
-    "body": description,
-    "creator_id": xyz
+    heading
+    body
+    creator_id
 }
 
 1. Create new discussion from request body .
@@ -30,26 +30,26 @@ Response :
 
 json = 
 {
-    "message": 'Discussion added successfully',
-    "discussion_id": discussion_id._id, //id of task that is created.
-    "status": 'success'
+    message: 'Discussion added successfully',
+    discussion_id: discussion_id._id, //id of task that is created.
+    status: 'success'
 }
 
 2. Fail to do
 
-404 Status Code
+500 Status Code
 json = 
 {
-    "status": 'fail',
-    "message": error message
+    status: 'fail',
+    message: error message
 }
 
 */
 
-const creatediscussion = async (req, res) => {
+const createDiscussion = async (req, res) => {
 
     //Write your code here.
     
 }
 
-module.exports = { getalldiscussion, creatediscussion };
+module.exports = { getAllDiscussion, createDiscussion };

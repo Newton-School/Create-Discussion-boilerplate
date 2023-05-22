@@ -1,10 +1,10 @@
 const express = require("express");
 
-const { getalldiscussion, creatediscussion } = require("../controllers/discussionControllers");
+const { getAllDiscussion, createDiscussion } = require("../controllers/discussionControllers");
 
 const router = express.Router();
 
-router.get("/", getalldiscussion);
-router.post("/create", creatediscussion);
+router.get("/", getAllDiscussion);
+router.post("/create", createDiscussion);
 
 module.exports = router;
